@@ -1,0 +1,5 @@
+{"level":"info","message":"Tool registered: echo","timestamp":"2025-08-17T04:26:13.924Z"}
+{"level":"info","message":"Tool registered: calculate","timestamp":"2025-08-17T04:26:13.929Z"}
+{"level":"info","message":"Tool registered: system_info","timestamp":"2025-08-17T04:26:13.930Z"}
+{"level":"info","message":"🚀 Phineup MCP Server started successfully","timestamp":"2025-08-17T04:26:13.930Z"}
+{"level":"info","message":"📊 Registered 3 tools","timestamp":"2025-08-17T04:26:13.930Z"}

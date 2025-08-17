@@ -1,13 +1,36 @@
 {
   "name": "phineup-open-mcp-server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Production-ready MCP (Model Context Protocol) server with advanced tooling capabilities",
+  "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix"
   },
-  "keywords": [],
+  "keywords": ["mcp", "model-context-protocol", "ai", "server", "tools"],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.8.1"
+  "packageManager": "pnpm@10.8.1",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "@types/node": "^24.3.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^5.5.0",
+    "typescript": "^5.9.2",
+    "winston": "^3.13.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "eslint": "^9.15.0",
+    "tsx": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
