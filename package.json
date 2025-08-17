@@ -8,9 +8,18 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "dev": "tsx src/index.ts",
+    "prod": "NODE_ENV=production node dist/index.js",
+    "prod:pm2": "pm2 start ecosystem.config.js",
+    "prod:pm2:stop": "pm2 stop ecosystem.config.js",
+    "prod:pm2:restart": "pm2 restart ecosystem.config.js",
+    "prod:pm2:logs": "pm2 logs",
+    "prod:pm2:monit": "pm2 monit",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint src/**/*.ts --fix"
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "clean": "rm -rf dist temp logs/*.log",
+    "prebuild": "npm run clean",
+    "postinstall": "mkdir -p logs temp"
   },
   "keywords": ["mcp", "model-context-protocol", "ai", "server", "tools"],
   "author": "",
@@ -19,14 +28,18 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.4.0",
     "@types/node": "^24.3.0",
+    "cloudconvert": "^3.0.0",
     "dotenv": "^16.4.5",
     "fastify": "^5.5.0",
+    "sharp": "^0.33.0",
     "typescript": "^5.9.2",
+    "uuid": "^10.0.0",
     "winston": "^3.13.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
+    "@types/uuid": "^10.0.0",
     "eslint": "^9.15.0",
     "tsx": "^4.19.2"
   },
