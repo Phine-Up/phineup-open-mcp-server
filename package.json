@@ -21,17 +21,24 @@
     "prebuild": "npm run clean",
     "postinstall": "mkdir -p logs temp"
   },
-  "keywords": ["mcp", "model-context-protocol", "ai", "server", "tools"],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "server",
+    "tools"
+  ],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.8.1",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^0.4.0",
+    "@modelcontextprotocol/sdk": "^1.17.3",
     "@types/node": "^24.3.0",
     "cloudconvert": "^3.0.0",
     "dotenv": "^16.4.5",
     "fastify": "^5.5.0",
     "sharp": "^0.33.0",
+    "tinify": "^1.8.1",
     "typescript": "^5.9.2",
     "uuid": "^10.0.0",
     "winston": "^3.13.0",
